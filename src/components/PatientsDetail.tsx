@@ -1,4 +1,5 @@
 import type { Patient } from "../types"
+import PatientDetailItem from "./PatientDetailItem"
 
 type PatientsDetailProps ={
     patient: Patient
@@ -7,9 +8,10 @@ type PatientsDetailProps ={
 export default function PatientsDetail({patient}:PatientsDetailProps) {
   return (
     <div className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl">
-        <p className="font-bold mb-3 text-gray-700 uppercase"> ID: {''}
-            <span className="font-normal normal-case">{patient.id}</span>
-        </p>
+        <PatientDetailItem
+        label="ID:"
+        data={patient.id}
+        />
     </div>
   )
 }
